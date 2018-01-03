@@ -180,10 +180,30 @@
     var setup = function(options) {
         settings = extend(defaults, options);
 
-        if (isAndroid()) settings.platform = "android";
-        if (isIOS()) settings.platform = "ios";
+        if (isAndroid()) 
+        {
+        	settings.platform = "android";
+        	showHideDeepLinksDiv(true);
+        }
+        else
+        if (isIOS())
+        {
+        	settings.platform = "ios";
+        	showHideDeepLinksDiv(true);
+        } 
+        else
+        	showHideDeepLinksDiv(false);
+        
     }
 
+function showHideDeepLinksDiv(show) {
+    var x = document.getElementById("deepLinks");
+    if (show {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
     /**
      * Tries to open your app URI through a hidden iframe.
      *
