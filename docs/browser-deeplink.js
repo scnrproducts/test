@@ -206,6 +206,8 @@
      * @return {Boolean} true, if you're on a mobile device and the link was opened
      */
     var open = function(uri) {
+    
+    
         if (!isMobile()) {
             return false;
         }
@@ -214,6 +216,12 @@
             return;
         }
 
+  <!-- Deep link URL for existing users with app already installed on their device -->
+        window.location = uri;
+  
+        setTimeout("window.location = '", 1000);
+        
+        
         if (isAndroid() && !navigator.userAgent.match(/Firefox/)) {
             var matches = uri.match(/([^:]+):\/\/(.+)$/i);
             uri = "intent://" + matches[2] + "#Intent;scheme=" + matches[1];
