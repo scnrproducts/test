@@ -198,12 +198,13 @@
 
 function showHideDeepLinksDiv(show) {
     var x = document.getElementById("deepLinks");
-    if (show {
+    if (show)
         x.style.display = "block";
     } else {
         x.style.display = "none";
     }
 }
+
     /**
      * Tries to open your app URI through a hidden iframe.
      *
