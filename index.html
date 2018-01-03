@@ -1,8 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <script src="browser-deeplink.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+    deeplink.setup({
+        iOS: {
+            appId: "645682444",
+            appName: "Verizon Cloud",
+        },
+        android: {
+            appId: "com.vcast.mediamanager"
+        }
+    });
+
+    function clickHandler(uri) {
+        deeplink.open(uri);
+        return false;
+    }
+
+    </script>
+    <style>
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+    a {
+        font-family: monospace;
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 25px;
+        background: #060;
+        color:#fff;
+        text-align: center;
+        font-size: 20px;
+    }
+    </style>
+</head>
 <body>
-
-<p><a href="vzcloud:///">Visit VZ Cloud</a></p>
-
+    <a href="#" data-uri="vzcloud:///" onclick="clickHandler(this.dataset.uri)">Verizon Cloud</a>
 </body>
 </html>
