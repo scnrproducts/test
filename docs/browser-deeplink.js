@@ -182,18 +182,18 @@
 
         if (isAndroid()) 
         {
-        	settings.platform = "android";
-        	showHideDeepLinksDiv(true);
+        	settings.platform = "android";    
         }
-        else
+       
         if (isIOS())
         {
         	settings.platform = "ios";
-        	showHideDeepLinksDiv(true);
-        } 
-        else
-        	showHideDeepLinksDiv(false);
+  
+        }  
         
+       
+        showHideDeepLinksDiv(isMobile());
+
     }
 
 function showHideDeepLinksDiv(show) {
