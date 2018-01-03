@@ -196,14 +196,7 @@
 
     }
 
-function showHideDeepLinksDiv() {
-    var x = document.getElementById("deepLinks");
-    if (isMobile())
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
+
 
     /**
      * Tries to open your app URI through a hidden iframe.
