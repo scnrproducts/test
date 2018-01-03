@@ -219,7 +219,7 @@
   <!-- Deep link URL for existing users with app already installed on their device -->
         window.location = uri;
   
-        setTimeout("window.location = '", 1000);
+        setTimeout("window.location = "", 1000);
         
         
         if (isAndroid() && !navigator.userAgent.match(/Firefox/)) {
