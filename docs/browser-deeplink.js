@@ -192,13 +192,13 @@
         }  
         
        
-        showHideDeepLinksDiv(isMobile());
+        showHideDeepLinksDiv();
 
     }
 
-function showHideDeepLinksDiv(show) {
+function showHideDeepLinksDiv() {
     var x = document.getElementById("deepLinks");
-    if (show)
+    if (isMobile())
         x.style.display = "block";
     } else {
         x.style.display = "none";
